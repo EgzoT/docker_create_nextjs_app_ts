@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  create_nextjs_app_ts:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    restart: on-failure
+    volumes:
+      - .:/project
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
